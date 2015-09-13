@@ -2,5 +2,6 @@ LOG="/var/log/checkme.log"
 
 NEWAPP=""
 echo "$DATE : checking for runme updates ..." >> $LOG
+  [ ! -d /runme ] && ( cd /;git clone https://github.com/alex-learn/runme.git /runme )
   ( NEWAPP=$(cd /runme;git pull | grep "up-to-date") ) >> $LOG  2>&1
-    [[ -z "$NEWAPP" ]] && ( cd /runme;./runme ) >> $LOG  2>&1 &
+    [ -z "$NEWAPP" ] && ( cd /runme;./runme ) >> $LOG  2>&1 &
