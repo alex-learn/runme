@@ -1,4 +1,2 @@
-
-( cd /home/www;\rm -rf ./html;git clone https://github.com/alex-learn/html.git html) && \
-( cd /home;chown -R www-data: www )
+# runme as root
 
