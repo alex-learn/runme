@@ -6,5 +6,5 @@ NEWAPP=""
 [ ! -d $DEST ] && ( git clone $GITHUB $DEST )
 
 ( NEWAPP=$(cd $DEST;git pull | grep "up-to-date") )
-  [ -z "$NEWAPP" ] && ( cd $DEST;nvm use;./startme ) &
+[ -z "$NEWAPP" ] && ( cd /home/www;chown -R www-data: html;chmod -R 755 html )
 
