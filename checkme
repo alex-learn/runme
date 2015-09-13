@@ -1,0 +1,6 @@
+LOG="/var/log/checkme.log"
+
+NEWAPP=""
+echo "$DATE : checking for runme updates ..." >> $LOG
+  ( NEWAPP=$(cd /runme;git pull | grep "up-to-date") ) >> $LOG  2>&1
+    [[ -z "$NEWAPP" ]] && ( cd /runme;./runme ) >> $LOG  2>&1 &
