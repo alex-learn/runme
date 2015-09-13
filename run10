@@ -1,0 +1,9 @@
+
+( cd /;git clone https://github.com/alex-learn/runme.git )
+
+[ -x /runme/create-www ] && /runme/create-www
+[ -x /runme/create-html ] && /runme/create-html
+[ -x /runme/start-service ] && /runme/start-service
+
+
+echo "Done run10..."

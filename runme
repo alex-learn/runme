@@ -1,0 +1,6 @@
+
+run10='run1?'
+run20='run2?'
+cat $run10 | /bin/bash
+cat $run20 | /bin/bash
+
