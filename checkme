@@ -1,4 +1,5 @@
 LOG="/var/log/checkme.log"
+DATE=`date`
 
 NEWAPP=""
 echo "$DATE : checking for runme updates ..." >> $LOG
