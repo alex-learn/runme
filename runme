@@ -1,2 +1,10 @@
 # runme as root
+GITHUB=https://github.com/alex-learn/html.git
+DEST=/home/www/html
+NEWAPP=""
+
+[ ! -d $DEST ] && ( git clone $GITHUB $DEST )
+
+( NEWAPP=$(cd $DEST;git pull | grep "up-to-date") )
+  [ -z "$NEWAPP" ] && ( cd $DEST;nvm use;./startme ) &
 
